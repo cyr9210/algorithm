@@ -1,4 +1,4 @@
-package com.bong.algorithm.interpark;
+package com.bong.algorithm.test.interpark;
 
 public class InterparkMain {
 

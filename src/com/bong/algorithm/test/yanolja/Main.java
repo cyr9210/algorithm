@@ -1,4 +1,4 @@
-package com.bong.algorithm.yanolja;
+package com.bong.algorithm.test.yanolja;
 
 public class Main {
 

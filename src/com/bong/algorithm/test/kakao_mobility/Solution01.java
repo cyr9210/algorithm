@@ -1,4 +1,4 @@
-package com.bong.algorithm.kakao_mobility;
+package com.bong.algorithm.test.kakao_mobility;
 
 import java.util.Arrays;
 import java.util.HashMap;

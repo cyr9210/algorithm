@@ -1,4 +1,4 @@
-package com.bong.algorithm.interpark;
+package com.bong.algorithm.test.interpark;
 
 import java.util.HashSet;
 import java.util.Set;

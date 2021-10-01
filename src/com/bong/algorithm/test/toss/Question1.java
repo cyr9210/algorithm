@@ -1,4 +1,4 @@
-package com.bong.algorithm.toss;
+package com.bong.algorithm.test.toss;
 
 public class Question1 {
 

@@ -1,4 +1,4 @@
-package com.bong.algorithm.naver_financial;
+package com.bong.algorithm.test.naver_financial;
 
 public class Main {
 
