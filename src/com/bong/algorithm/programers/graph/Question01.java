@@ -20,6 +20,14 @@ public class Question01 {
                     map[array[1]].add(array[0]);
                 });
 
+//        2차배열
+//        int[][] map2 = new int[n + 1][n + 1];
+//        Arrays.stream(edge)
+//                .forEach(array -> {
+//                    map2[array[0]][array[1]] = 1;
+//                    map2[array[1]][array[0]] = 1;
+//                });
+
         Queue<Integer> nodes = new LinkedList<>();
         nodes.add(1);
         int max = 0;
