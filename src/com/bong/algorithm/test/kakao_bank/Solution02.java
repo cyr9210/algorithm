@@ -76,23 +76,28 @@ public class Solution02 {
             }
         }
 
-        public void checkUndefinedColor() {
+        public boolean checkUndefinedColor() {
             if (blackCount == 1) {
                 if (before != null && next != null) {
                     if (before.color == BLACK && next.color == UNDEFINED) {
                         next.color = WHITE;
+                        return true;
                     }
-                    if (next.color == BLACK && next.color == UNDEFINED) {
+                    if (next.color == BLACK && before.color == UNDEFINED) {
                         before.color = WHITE;
+                        return true;
                     }
-                    if (before.color == WHITE && before.color == UNDEFINED) {
+                    if (before.color == WHITE && next.color == UNDEFINED) {
                         next.color = BLACK;
+                        return true;
                     }
                     if (next.color == WHITE && before.color == UNDEFINED) {
                         before.color = BLACK;
+                        return true;
                     }
                 }
             }
+            return false;
         }
     }
 
@@ -134,7 +139,14 @@ public class Solution02 {
         public void checkIter() {
             people.stream().filter(person -> person.getBlackCount() == 2).forEach(person -> person.beforeNextComplete(1));
             people.stream().filter(person -> person.getBlackCount() == 0).forEach(person -> person.beforeNextComplete(2));
-            people.stream().forEach(person -> person.checkUndefinedColor());
+
+            while (true) {
+                Boolean isChange = people.stream().map(Person::checkUndefinedColor)
+                        .filter(change -> change).findAny().orElse(false);
+                if (!isChange) {
+                    break;
+                }
+            }
         }
 
         public int[] getAnswer() {

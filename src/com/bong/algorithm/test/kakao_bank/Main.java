@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // 1번
         String[] request = new String[]{"01/01 4 50000","01/11 6 3555","02/01 0 -23555","02/25 5 5000","03/25 0 -15000","06/09 8 43951","12/30 9 99999"};
         Solution01 solution01 = new Solution01();
         int result = solution01.solution(request);
@@ -14,6 +15,8 @@ public class Main {
         int result2 = solution1_2.solution(request2);
         System.out.println(result2);
 
+
+        // 2번
         int[] request3 = new int[]{1, 1, 2, 0};
         Solution02 solution02 = new Solution02();
         int[] result3 = solution02.solution(request3);
@@ -27,6 +30,14 @@ public class Main {
         int[] result4 = solution02_2.solution(request4);
         System.out.println("2------------");
         for (int i : result4) {
+            System.out.println(i);
+        }
+
+        int[] request5 = new int[]{1, 1, 2, 1, 1, 2, 1, 2, 1};
+        Solution02 solution02_3 = new Solution02();
+        int[] result5 = solution02_3.solution(request5);
+        System.out.println("3------------");
+        for (int i : result5) {
             System.out.println(i);
         }
     }
